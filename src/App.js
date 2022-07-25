@@ -4,6 +4,7 @@ import NavBar from "./components/molecules/NavBar";
 import Reviews from "./components/pages/Reviews";
 import Profile from "./components/pages/Profile";
 import Home from "./components/pages/Home";
+import AllReviews from "./components/templates/AllRevies";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/reviews" element={<Reviews />} />
+          <Route path="/reviews/:category" element={<AllReviews />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>

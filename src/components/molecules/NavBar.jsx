@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button } from "../atoms/button";
+import { Button } from "../atoms/Button";
 
 const NavBar = () => {
   return (
