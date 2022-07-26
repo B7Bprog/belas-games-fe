@@ -31,7 +31,9 @@ const ReviewCard = ({ selectedCategory, categoryParam }) => {
             ></img>
             <TextField text={`Author: ${review.owner}`} />
             <TextField text={`Category: ${review.category}`} />
-            <TextField text={`Written at: ${review.created_at}`} />
+            <TextField
+              text={`Written at: ${new Date(review.created_at).toDateString()}`}
+            />
             <TextField text={`Number of comments: ${review.comment_count}`} />
           </div>
         );
