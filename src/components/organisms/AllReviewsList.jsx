@@ -1,17 +1,14 @@
-import { useState } from "react";
-import CategoryDropdown from "../atoms/CategoryDropdown";
+import { useParams } from "react-router-dom";
+import CategoriesBar from "../molecules/CategoriesBar";
 import ReviewCard from "../molecules/ReviewCard";
 
 const AllReviewsList = () => {
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
+  const { category } = useParams();
+
   return (
     <div>
-      <CategoryDropdown
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-      />
-      <ReviewCard selectedCategory={selectedCategory} />
+      <CategoriesBar />
+      <ReviewCard categoryParam={category} />
     </div>
   );
 };
