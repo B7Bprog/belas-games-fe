@@ -1,0 +1,25 @@
+.card {
+  font-family: Neucha, sans-serif;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  margin: 10px;
+}
+.allCards {
+  display: grid;
+  padding: 2rem;
+
+  align-items: center;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 3px;
+}

@@ -2,6 +2,7 @@ import { useReviews } from "../../my-custom-hooks/useReviews";
 import TextField from "../atoms/TextField";
 import styles from "./styles/ReviewCard.module.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ReviewCard = ({ selectedCategory, categoryParam }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,19 +24,23 @@ const ReviewCard = ({ selectedCategory, categoryParam }) => {
       {reviews.map((review) => {
         console.log(review.review_img_url, "<<<imageURL");
         return (
-          <div key={review.review_id} className={styles.card}>
-            <TextField text={`Title: ${review.title}`} />
-            <img
-              src={review.review_img_url}
-              alt={`Image for review with title of: ${review.title}`}
-            ></img>
-            <TextField text={`Author: ${review.owner}`} />
-            <TextField text={`Category: ${review.category}`} />
-            <TextField
-              text={`Written at: ${new Date(review.created_at).toDateString()}`}
-            />
-            <TextField text={`Number of comments: ${review.comment_count}`} />
-          </div>
+          <Link to={`/reviews/${review.review_id}`}>
+            <div key={review.review_id} className={styles.card}>
+              <TextField text={`Title: ${review.title}`} />
+              <img
+                src={review.review_img_url}
+                alt={`Image for review with title of: ${review.title}`}
+              ></img>
+              <TextField text={`Author: ${review.owner}`} />
+              <TextField text={`Category: ${review.category}`} />
+              <TextField
+                text={`Written at: ${new Date(
+                  review.created_at
+                ).toDateString()}`}
+              />
+              <TextField text={`Number of comments: ${review.comment_count}`} />
+            </div>
+          </Link>
         );
       })}
     </div>
