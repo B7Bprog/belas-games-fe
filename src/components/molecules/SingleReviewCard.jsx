@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { useReviews } from "../../my-custom-hooks/useReviews";
+import { useParams } from "react-router-dom";
 import { useSingleReview } from "../../my-custom-hooks/useSingleReview";
 import TextField from "../atoms/TextField";
 import styles from "./styles/SingleReviewCard.module.css";
@@ -17,19 +16,27 @@ const SingleReviewCard = () => {
     <TextField text="Loading data" />
   ) : (
     <div className={styles.allCards}>
-      <div key={review.review_id} className={styles.card}>
-        <TextField text={`Title: ${review.title}`} />
+      <ul key={review.review_id} className={styles.card}>
+        <ul>
+          <h2> {`Title: ${review.title}`}</h2>{" "}
+        </ul>
         <img
           src={review.review_img_url}
           alt={`Image for review with title of: ${review.title}`}
         ></img>
-        <TextField text={`Author: ${review.owner}`} />
-        <TextField text={`Category: ${review.category}`} />
-        <TextField
-          text={`Written at: ${new Date(review.created_at).toDateString()}`}
-        />
-        <TextField text={`Number of comments: ${review.comment_count}`} />
-      </div>
+        <ul>
+          <h3> {`Author: ${review.owner}`} </h3>
+        </ul>
+        <ul>
+          <h3> {`Category: ${review.category}`} </h3>
+        </ul>
+        <ul>
+          <h3>{`Written at: ${new Date(review.created_at).toDateString()}`}</h3>
+        </ul>
+        <ul>
+          <h3> {`Number of comments: ${review.comment_count}`} </h3>
+        </ul>
+      </ul>
     </div>
   );
 };
