@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 import { useSingleReview } from "../../my-custom-hooks/useSingleReview";
 import TextField from "../atoms/TextField";
+import Comments from "./Comments";
 import styles from "./styles/SingleReviewCard.module.css";
 import Votes from "./Votes";
 const SingleReviewCard = () => {
@@ -53,6 +54,7 @@ const SingleReviewCard = () => {
         hasUpVoted={hasUpVoted}
         originalNumOfVotes={originalNumOfVotes}
       />
+      <Comments review_id={review.review_id} />
     </div>
   );
 };
