@@ -7,16 +7,16 @@ const CategoriesBar = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [errorState, setErrorState] = useState(null);
   const categories = useCategories(setIsLoading, setErrorState);
-  console.log(categories, "<<<< categories");
+
   return errorState ? (
     <TextField text="Something went wrong" />
   ) : isLoading ? (
-    <TextField text="Loading data" />
+    <TextField text="Loading data..." />
   ) : (
     <div>
       {categories.map((category) => {
         return (
-          <div>
+          <div key={category.slug}>
             <Link to={`/reviews/categories/${category.slug}`}>
               {category.slug}
             </Link>

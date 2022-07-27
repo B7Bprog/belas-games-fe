@@ -5,7 +5,6 @@ export const useCategories = (setIsLoading, setErrorState) => {
   const [categories, setcategories] = useState([]);
 
   useEffect(() => {
-    console.log("inside useEffect");
     setIsLoading(true);
     axios
       .get("https://belas-games.herokuapp.com/api/categories")

@@ -1,6 +1,6 @@
+import styles from "./styles/ReviewCard.module.css";
 import { useReviews } from "../../my-custom-hooks/useReviews";
 import TextField from "../atoms/TextField";
-import styles from "./styles/ReviewCard.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,6 @@ const ReviewCard = ({ selectedCategory, categoryParam }) => {
 
   let reviews = useReviews(setIsLoading, setErrorState, selectedCategory);
 
-  console.log(reviews, "<<<<reviews here in ReviewCard");
   if (categoryParam) {
     reviews = reviews.filter((review) => review.category === categoryParam);
   }
@@ -18,21 +17,27 @@ const ReviewCard = ({ selectedCategory, categoryParam }) => {
   return errorState ? (
     <TextField text="Something went wrong" />
   ) : isLoading ? (
-    <TextField text="Loading data" />
+    <TextField text="Loading data..." />
   ) : (
     <div className={styles.allCards}>
       {reviews.map((review) => {
-        console.log(review.review_img_url, "<<<imageURL");
         return (
-          <Link to={`/reviews/${review.review_id}`} className={styles.Link}>
+          <Link
+            key={review.review_id}
+            to={`/reviews/${review.review_id}`}
+            className={styles.Link}
+          >
             <ul key={review.review_id} className={styles.card}>
               <li>
                 <h2>{`Title: ${review.title}`}</h2>
               </li>
-              <img
-                src={review.review_img_url}
-                alt={`Image for review with title of: ${review.title}`}
-              ></img>
+              <div className={styles.imageDiv}>
+                <img
+                  className={styles.img}
+                  src={review.review_img_url}
+                  alt={`Image for review with title of: ${review.title}`}
+                ></img>
+              </div>
               <li>
                 <h3> {`Author: ${review.owner}`} </h3>
               </li>
@@ -58,23 +63,3 @@ const ReviewCard = ({ selectedCategory, categoryParam }) => {
 };
 
 export default ReviewCard;
-
-/* 
-
-<Link to={`/reviews/${review.review_id}`}>
-<div key={review.review_id} className={styles.card}>
-  <TextField text={`Title: ${review.title}`} />
-  <img
-    src={review.review_img_url}
-    alt={`Image for review with title of: ${review.title}`}
-  ></img>
-  <TextField text={`Author: ${review.owner}`} />
-  <TextField text={`Category: ${review.category}`} />
-  <TextField
-    text={`Written at: ${new Date(
-      review.created_at
-    ).toDateString()}`}
-  />
-  <TextField text={`Number of comments: ${review.comment_count}`} />
-</div>
-</Link> */
