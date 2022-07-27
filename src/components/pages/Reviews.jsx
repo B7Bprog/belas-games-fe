@@ -1,4 +1,4 @@
-import AllReviews from "../templates/AllRevies";
+import AllReviews from "../templates/AllReviews";
 
 const Reviews = () => {
   return <AllReviews />;

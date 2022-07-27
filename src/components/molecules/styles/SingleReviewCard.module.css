@@ -8,22 +8,18 @@
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
   margin: 10px;
-  list-style: none;
 }
 .allCards {
   display: grid;
   padding: 2rem;
 
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-content: space-between;
 }
 img {
   max-width: 100%;
   max-height: 100%;
   display: block;
-}
-.Link {
-  color: black;
-  text-decoration: none; /* no underline */
+  border-radius: 3px;
 }

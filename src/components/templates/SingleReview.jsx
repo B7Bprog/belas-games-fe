@@ -1,5 +1,7 @@
+import SingleReviewCard from "../molecules/SingleReviewCard";
+
 const SingleReview = () => {
-  return null;
+  return <SingleReviewCard />;
 };
 
 export default SingleReview;

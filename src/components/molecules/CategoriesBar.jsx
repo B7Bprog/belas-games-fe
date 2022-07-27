@@ -17,7 +17,9 @@ const CategoriesBar = () => {
       {categories.map((category) => {
         return (
           <div>
-            <Link to={`/reviews/${category.slug}`}>{category.slug}</Link>
+            <Link to={`/reviews/categories/${category.slug}`}>
+              {category.slug}
+            </Link>
           </div>
         );
       })}
