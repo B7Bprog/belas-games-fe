@@ -8,7 +8,7 @@ const Votes = ({ review, setHasUpVoted, hasUpVoted, originalNumOfVotes }) => {
   const [errorState, setErrorState] = useState(null);
   const originalVotes = review.votes;
   const [tempVotes, setTempVotes] = useState(originalVotes);
-  let incrementVotes;
+  let incrementVotes = 0;
 
   const { user } = useContext(userContext);
 
