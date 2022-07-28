@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 import { useSingleReview } from "../../my-custom-hooks/useSingleReview";
 import TextField from "../atoms/TextField";
+import Comments from "./Comments";
 import styles from "./styles/SingleReviewCard.module.css";
 import Votes from "./Votes";
 const SingleReviewCard = () => {
@@ -41,7 +42,7 @@ const SingleReviewCard = () => {
           <h3> {`Category: ${review.category}`} </h3>
         </li>
         <li>
-          <h3>{`Written at: ${new Date(review.created_at).toDateString()}`}</h3>
+          <h3>{`Written on: ${new Date(review.created_at).toDateString()}`}</h3>
         </li>
         <li>
           <h3> {`Number of comments: ${review.comment_count}`} </h3>
@@ -53,6 +54,7 @@ const SingleReviewCard = () => {
         hasUpVoted={hasUpVoted}
         originalNumOfVotes={originalNumOfVotes}
       />
+      <Comments review_id={review.review_id} />
     </div>
   );
 };
