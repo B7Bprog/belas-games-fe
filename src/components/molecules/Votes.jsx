@@ -13,7 +13,6 @@ const Votes = ({ review, setHasUpVoted, hasUpVoted, originalNumOfVotes }) => {
   const { user } = useContext(userContext);
 
   function patchReview() {
-    console.log("Patching with:", incrementVotes);
     axios
       .patch(
         `https://belas-games.herokuapp.com/api/reviews/${review.review_id}`,
@@ -21,7 +20,6 @@ const Votes = ({ review, setHasUpVoted, hasUpVoted, originalNumOfVotes }) => {
       )
       .then(() => {})
       .catch((err) => {
-        console.log(err);
         setErrorState({ err });
       });
   }
@@ -85,7 +83,7 @@ const Votes = ({ review, setHasUpVoted, hasUpVoted, originalNumOfVotes }) => {
       <h3 style={{ color: `${buttonTextColor}` }}>{`Votes: ${tempVotes}`}</h3>
     </div>
   ) : (
-    <p>Please log in to vote.</p>
+    <h3>Please log in to vote.</h3>
   );
 };
 
