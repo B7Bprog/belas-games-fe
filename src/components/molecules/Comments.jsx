@@ -14,7 +14,6 @@ const Comments = ({ review_id }) => {
       });
   }, [review_id]);
 
-  console.log(comments, "<<<comments");
   return (
     <div>
       <h3>Comments:</h3>
