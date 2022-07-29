@@ -4,11 +4,24 @@ import TextField from "../atoms/TextField";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const ReviewCard = ({ selectedCategory, categoryParam }) => {
+const ReviewCard = ({
+  selectedCategory,
+  categoryParam,
+  selectedSort,
+  selectedOrder,
+}) => {
   const [isLoading, setIsLoading] = useState(true);
   const [errorState, setErrorState] = useState(undefined);
 
-  let reviews = useReviews(setIsLoading, setErrorState, selectedCategory);
+  let reviews = useReviews(
+    setIsLoading,
+    setErrorState,
+    selectedCategory,
+    selectedSort,
+    selectedOrder
+  );
+
+  console.log(reviews, "<<<< review");
 
   if (categoryParam) {
     reviews = reviews.filter((review) => review.category === categoryParam);

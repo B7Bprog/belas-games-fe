@@ -1,13 +1,24 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export const useReviews = (setIsLoading, setErrorState, selectedCategory) => {
+export const useReviews = (
+  setIsLoading,
+  setErrorState,
+  selectedCategory,
+  selectedSort,
+  selectedOrder
+) => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("https://belas-games.herokuapp.com/api/reviews")
+      .get("https://belas-games.herokuapp.com/api/reviews", {
+        params: {
+          sort_by: selectedSort,
+          order: selectedOrder,
+        },
+      })
       .then((response) => {
         setReviews(response.data.reviews);
         setIsLoading(false);
@@ -15,6 +26,6 @@ export const useReviews = (setIsLoading, setErrorState, selectedCategory) => {
       .catch((err) => {
         setErrorState({ err });
       });
-  }, [selectedCategory]);
+  }, [selectedCategory, selectedSort, selectedOrder]);
   return reviews;
 };
