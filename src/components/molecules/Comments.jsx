@@ -1,9 +1,11 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { userContext } from "../../contexts/userContext";
 import styles from "./styles/Comments.module.css";
 
 const Comments = ({ review_id }) => {
   const [comments, setComments] = useState([]);
+  const { user } = useContext(userContext);
   useEffect(() => {
     axios
       .get(
