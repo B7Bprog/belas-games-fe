@@ -1,5 +1,7 @@
+import Profiles from "../organisms/Profiles";
+
 const AllProfiles = () => {
-  return null;
+  return <Profiles />;
 };
 
 export default AllProfiles;
