@@ -1,5 +1,7 @@
+import AllReviews from "../templates/AllReviews";
+
 const Home = () => {
-  return null;
+  return <AllReviews />;
 };
 
 export default Home;

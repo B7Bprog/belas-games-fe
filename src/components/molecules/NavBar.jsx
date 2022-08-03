@@ -10,9 +10,7 @@ const NavBar = () => {
       <Link to="/">
         <Button text={"Home"}></Button>
       </Link>
-      <Link to="/reviews">
-        <Button text={"Reviews"}></Button>
-      </Link>
+
       <Link to="/profile">
         <Button text={"Profile"}></Button>
       </Link>

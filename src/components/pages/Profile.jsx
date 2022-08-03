@@ -1,5 +1,7 @@
+import AllProfiles from "../templates/AllProfiles";
+
 const Profile = () => {
-  return null;
+  return <AllProfiles />;
 };
 
 export default Profile;
