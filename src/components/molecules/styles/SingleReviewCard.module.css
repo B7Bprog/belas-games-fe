@@ -2,12 +2,11 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 1ch;
+
+  row-gap: 3ch;
   width: auto;
   margin: 5%;
-  padding: 5%;
+  padding: 8% 5% 8% 5%;
   text-align: center;
 
   border: solid black;
@@ -29,8 +28,7 @@
 .allCards {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   row-gap: 5ch;
   column-gap: 5ch;
 
@@ -41,6 +39,12 @@
   width: 100%;
   object-fit: cover;
 }
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.3rem;
+}
 li {
 }
 .imageDiv {
@@ -48,4 +52,42 @@ li {
 
   overflow: hidden;
   border: solid black;
+  margin: 1%;
+}
+
+@media only screen and (max-width: 300px) {
+  h3 {
+    font-size: 1.1rem;
+  }
+  .card {
+  }
+  .allCards {
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  h3 {
+    font-size: 1.3rem;
+  }
+  .card {
+    padding: 4vw 5vw 4vw 5vw;
+    text-align: center;
+  }
+  .allCards {
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  .card {
+    padding: 2vw 5vw 2vw 5vw;
+    text-align: center;
+  }
+  .allCards {
+  }
 }
