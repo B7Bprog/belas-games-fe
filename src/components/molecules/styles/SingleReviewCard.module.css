@@ -2,12 +2,13 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   row-gap: 1ch;
   width: auto;
-
+  margin: 5%;
   padding: 5%;
+  text-align: center;
 
   border: solid black;
 
@@ -26,23 +27,25 @@
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
 .allCards {
-  display: grid;
-  padding: 5%;
-
-  justify-content: space-around;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   row-gap: 5ch;
   column-gap: 5ch;
-  width: 100%;
+
   background-image: url("https://www.kolpaper.com/wp-content/uploads/2020/09/Black-and-Red-Design-Wallpaper.jpg");
 }
 .img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 li {
 }
 .imageDiv {
   grid-column: 1 / span 3;
-  text-align: center;
+
   overflow: hidden;
   border: solid black;
 }
