@@ -1,0 +1,18 @@
+.textField {
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 3%;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 600px) {
+  .textField {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .textField {
+    font-size: 3rem;
+  }
+}
