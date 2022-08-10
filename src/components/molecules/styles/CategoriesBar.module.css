@@ -10,9 +10,6 @@
   row-gap: 0.5rem;
   padding: 1rem;
   background-color: rgb(231, 231, 231);
-  border: solid black;
-
-  background-image: url("https://cdn.wallpapersafari.com/80/65/M5lI1L.jpg");
 }
 #categoriesTitle {
   display: flex;
@@ -38,7 +35,8 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  border: solid black;
+  border: solid white;
+
   font-size: xx-large;
   font-weight: bold;
   color: black;

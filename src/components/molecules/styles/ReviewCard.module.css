@@ -6,11 +6,9 @@
   align-items: center;
   row-gap: 1ch;
   width: auto;
+  height: 700px;
   text-align: center;
-
-  padding: 5%;
-
-  border: solid black;
+  padding-bottom: 2%;
 
   box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
 
@@ -28,14 +26,14 @@
 }
 .allCards {
   display: grid;
-  padding: 5%;
-
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 2%;
   justify-content: space-around;
   grid-template-columns: 1fr;
   row-gap: 5ch;
   column-gap: 5ch;
   width: 100%;
-  background-image: url("https://www.kolpaper.com/wp-content/uploads/2020/09/Black-and-Red-Design-Wallpaper.jpg");
 }
 
 .Link {
@@ -49,15 +47,16 @@ li {
 }
 .img {
   /* object-fit: cover;*/
-  height: 100%;
+  height: 400px;
   width: 100%;
   object-fit: cover;
 }
 .imageDiv {
-  grid-column: 1 / span 3;
-  text-align: center;
-  overflow: hidden;
-  border: solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 @media only screen and (min-width: 600px) {
@@ -66,6 +65,8 @@ li {
   }
   .allCards {
     grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 2%;
+    padding-right: 2%;
   }
 }
 
@@ -75,5 +76,7 @@ li {
   }
   .allCards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 2%;
+    padding-right: 2%;
   }
 }

@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { userContext } from "../../contexts/userContext";
 import { Button } from "../atoms/Button";
 import TextField from "../atoms/TextField";
+import styles from "./styles/Votes.module.css";
 
 const Votes = ({ review, setHasUpVoted, hasUpVoted, originalNumOfVotes }) => {
   const [errorState, setErrorState] = useState(null);
@@ -69,21 +70,26 @@ const Votes = ({ review, setHasUpVoted, hasUpVoted, originalNumOfVotes }) => {
     <div>
       {hasUpVoted ? (
         <div>
-          {" "}
-          <p>You have voted already.</p>
-          <Button text="👍" onClick={handleThumbsUp} />
-          <Button text="👎" onClick={handleThumbsDown} />{" "}
+          <p id={styles.hasVoted}>You have voted already.</p>
+          <div className={styles.thumbs}>
+            <Button text="👍" onClick={handleThumbsUp} />
+            <Button text="👎" onClick={handleThumbsDown} />{" "}
+          </div>
         </div>
       ) : (
-        <div>
+        <div className={styles.thumbs}>
           <Button text="👍" onClick={handleThumbsUp} />
           <Button text="👎" onClick={handleThumbsDown} />
         </div>
       )}
-      <h3 style={{ color: `${buttonTextColor}` }}>{`Votes: ${tempVotes}`}</h3>
+      <div id={styles.votes}>
+        <h3
+          style={{ color: `${buttonTextColor}`, fontSize: "1.8rem" }}
+        >{`Votes: ${tempVotes}`}</h3>
+      </div>
     </div>
   ) : (
-    <h3>Please log in to vote.</h3>
+    <h3 id={styles.loginToVote}>Please log in to vote.</h3>
   );
 };
 

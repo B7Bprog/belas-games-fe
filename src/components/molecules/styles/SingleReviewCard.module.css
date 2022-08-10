@@ -6,10 +6,8 @@
   row-gap: 3ch;
   width: auto;
   margin: 5%;
-  padding: 8% 5% 8% 5%;
+  padding-bottom: 2%;
   text-align: center;
-
-  border: solid black;
 
   box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
 
@@ -17,22 +15,12 @@
   background-color: rgb(255, 255, 255);
 }
 
-.card:hover {
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
-  transform: translate3d(0, 2px, 0);
-}
-
-.card:focus {
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
-}
 .allCards {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   row-gap: 5ch;
   column-gap: 5ch;
-
-  background-image: url("https://www.kolpaper.com/wp-content/uploads/2020/09/Black-and-Red-Design-Wallpaper.jpg");
 }
 .img {
   height: 100%;
@@ -48,11 +36,11 @@ h3 {
 li {
 }
 .imageDiv {
-  grid-column: 1 / span 3;
-
-  overflow: hidden;
-  border: solid black;
-  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 @media only screen and (max-width: 300px) {
@@ -70,7 +58,6 @@ li {
     font-size: 1.3rem;
   }
   .card {
-    padding: 4vw 5vw 4vw 5vw;
     text-align: center;
   }
   .allCards {
@@ -85,7 +72,6 @@ li {
     font-size: 1.6rem;
   }
   .card {
-    padding: 2vw 5vw 2vw 5vw;
     text-align: center;
   }
   .allCards {

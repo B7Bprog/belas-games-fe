@@ -23,9 +23,6 @@ const SingleReviewCard = () => {
   ) : (
     <div className={styles.allCards}>
       <ul key={review.review_id} className={styles.card}>
-        <li>
-          <h2> {review.title}</h2>{" "}
-        </li>
         <div className={styles.imageDiv}>
           <img
             className={styles.img}
@@ -33,6 +30,9 @@ const SingleReviewCard = () => {
             alt={`Image for review with title of: ${review.title}`}
           ></img>
         </div>
+        <li>
+          <h2> {review.title}</h2>{" "}
+        </li>
         <li>
           <h3>{`${review.review_body}`}</h3>
         </li>
@@ -56,6 +56,7 @@ const SingleReviewCard = () => {
         originalNumOfVotes={originalNumOfVotes}
       />
       <Comments review_id={review.review_id} />
+
       <AddCommentCard review_id={review.review_id} />
     </div>
   );

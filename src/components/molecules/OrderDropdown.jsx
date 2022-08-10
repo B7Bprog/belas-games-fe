@@ -1,3 +1,5 @@
+import styles from "./styles/OrderDropdown.module.css";
+
 const OrderDropdown = ({ setSelectedOrder }) => {
   const orderOptions = ["asc", "desc"];
 
@@ -8,9 +10,10 @@ const OrderDropdown = ({ setSelectedOrder }) => {
 
   return (
     <div>
-      <form>
-        <label>
-          <select onChange={handleChange}>
+      <form className={styles.orderForm}>
+        <label id={styles.orderLabel}>
+          Order by:
+          <select onChange={handleChange} id={styles.orderSelect}>
             {orderOptions.map((orderOption) => {
               return (
                 <option type="reset" value={orderOption} key={orderOption}>

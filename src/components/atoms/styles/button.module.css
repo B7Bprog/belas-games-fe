@@ -6,7 +6,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  border: solid black;
+  border: solid white;
   font-size: xx-large;
   font-weight: bold;
 }
