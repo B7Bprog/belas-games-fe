@@ -1,7 +1,7 @@
 .button {
   text-decoration: none;
   transition: all 235ms ease-in-out;
-  padding: 15px 32px;
+  padding: 13px 30px;
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -23,5 +23,18 @@
 @media only screen and (max-width: 300px) {
   .button {
     padding: 8px 10px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .button {
+    padding: 9px 20px;
+    font-size: large;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .button {
+    padding: 9px 20px;
+    font-size: xx-large;
   }
 }

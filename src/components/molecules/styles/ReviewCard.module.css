@@ -64,7 +64,7 @@ li {
     grid-template-columns: 25% 75%;
   }
   .allCards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding-left: 2%;
     padding-right: 2%;
   }
