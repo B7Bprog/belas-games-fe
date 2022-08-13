@@ -67,9 +67,10 @@ const AddCommentCard = ({ review_id }) => {
             );
           })}
         </div>
-        <div>
+        <div className={styles.formDiv}>
           <form onSubmit={(e) => handleSubmit(e)}>
             <textarea
+              className={styles.textarea}
               type="text"
               name="comment"
               value={comment}
@@ -83,9 +84,13 @@ const AddCommentCard = ({ review_id }) => {
         </div>
       </div>
     ) : (
-      <div>
+      <div className={styles.formDiv}>
+        <div id={styles.leaveComment}>
+          <h3>Leave a comment:</h3>
+        </div>
         <form onSubmit={(e) => handleSubmit(e)}>
           <textarea
+            className={styles.textarea}
             type="text"
             name="comment"
             value={comment}
@@ -94,12 +99,14 @@ const AddCommentCard = ({ review_id }) => {
               setComment(e.target.value);
             }}
           ></textarea>
-          <Button type="submit" text="Submit" />
+          <div id={styles.buttonDiv}>
+            <Button type="submit" text="Submit" />
+          </div>
         </form>
       </div>
     )
   ) : (
-    <h3>Please log in to vote.</h3>
+    <h3 id={styles.loginToComment}>Please log in to write a comment.</h3>
   );
 };
 

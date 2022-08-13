@@ -15,18 +15,18 @@ const CategoriesBar = () => {
     <TextField text="Loading data..." />
   ) : (
     <div>
-      <h3>Categories:</h3>
+      <h3 id={styles.categoriesTitle}>Categories:</h3>
       <div className={styles.CategoriesBar}>
         {categories.map((category) => {
           return (
-            <div key={category.slug}>
-              <Link
-                to={`/reviews/categories/${category.slug}`}
-                className={styles.Link}
-              >
-                {category.slug}
-              </Link>
-            </div>
+            <Link
+              to={`/reviews/categories/${category.slug}`}
+              className={styles.Link}
+            >
+              <div key={category.slug} className={styles.linkContainer}>
+                <div className={styles.linkWrapper}>{category.slug}</div>
+              </div>
+            </Link>
           );
         })}
       </div>

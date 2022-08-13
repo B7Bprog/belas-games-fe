@@ -4,6 +4,7 @@ import CategoriesBar from "../molecules/CategoriesBar";
 import OrderDropdown from "../molecules/OrderDropdown";
 import ReviewCard from "../molecules/ReviewCard";
 import SortDropdown from "../molecules/SortDropdown";
+import styles from "./styles/AllReviewsList.module.css";
 
 const AllReviewsList = () => {
   const { category } = useParams();
@@ -13,8 +14,10 @@ const AllReviewsList = () => {
   return (
     <div>
       <CategoriesBar />
-      <SortDropdown setSelectedSort={setSelectedSort} />
-      <OrderDropdown setSelectedOrder={setSelectedOrder} />
+      <div className={styles.selectionDiv}>
+        <SortDropdown setSelectedSort={setSelectedSort} />
+        <OrderDropdown setSelectedOrder={setSelectedOrder} />
+      </div>
       <ReviewCard
         categoryParam={category}
         selectedSort={selectedSort}

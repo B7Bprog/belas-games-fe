@@ -41,9 +41,6 @@ const ReviewCard = ({
             className={styles.Link}
           >
             <ul key={review.review_id} className={styles.card}>
-              <li>
-                <h2>{`Title: ${review.title}`}</h2>
-              </li>
               <div className={styles.imageDiv}>
                 <img
                   className={styles.img}
@@ -51,6 +48,9 @@ const ReviewCard = ({
                   alt={`Image for review with title of: ${review.title}`}
                 ></img>
               </div>
+              <li id={styles.title}>
+                <h2>{`${review.title}`}</h2>
+              </li>
               <li>
                 <h3> {`Author: ${review.owner}`} </h3>
               </li>

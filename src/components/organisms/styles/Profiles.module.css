@@ -1,0 +1,36 @@
+.profilesDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+}
+.singleProfileDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+  width: 70%;
+}
+.img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 300px) {
+  .singleProfileDiv {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .singleProfileDiv {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .singleProfileDiv {
+    width: 30%;
+  }
+}

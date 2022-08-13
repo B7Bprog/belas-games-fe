@@ -1,43 +1,79 @@
 .card {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  font-family: Neucha, sans-serif;
-  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-  border-style: solid;
-  border-width: 2px;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
-  margin: 10px;
-  box-sizing: border-box;
-  list-style: none;
+
+  row-gap: 3ch;
+  width: auto;
+  margin: 5%;
+  padding-bottom: 2%;
+  text-align: center;
+
   box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
 
   transition: all 235ms ease-in-out;
   background-color: rgb(255, 255, 255);
 }
-.allCards {
-  width: 70%;
 
-  margin: auto;
+.allCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 5ch;
+  column-gap: 5ch;
 }
 .img {
-  margin-left: -4%;
-  margin-right: 10%;
-
   height: 100%;
-  width: auto;
-  display: block;
-  border-radius: 3px;
+  width: 100%;
+  object-fit: cover;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.3rem;
 }
 li {
-  margin-left: -10%;
-  margin-right: 20px;
 }
 .imageDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 300px) {
+  h3 {
+    font-size: 1.1rem;
+  }
+  .card {
+  }
+  .allCards {
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  h3 {
+    font-size: 1.3rem;
+  }
+  .card {
+    text-align: center;
+  }
+  .allCards {
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  .card {
+    text-align: center;
+  }
+  .allCards {
+  }
 }

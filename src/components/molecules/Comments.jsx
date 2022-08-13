@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { userContext } from "../../contexts/userContext";
+import { Button } from "../atoms/Button";
 import styles from "./styles/Comments.module.css";
 
 const Comments = ({ review_id }) => {
@@ -34,29 +35,28 @@ const Comments = ({ review_id }) => {
   console.log(comments[4], "comment no. 4");
 
   return isDeleting ? (
-    <h2>Deleting comment</h2>
+    <h2 className={styles.commentsTitle}>Deleting comment</h2>
   ) : (
     <div>
-      <h3>Comments:</h3>
+      <h3 className={styles.commentsTitle}>Comments:</h3>
       <div>
         {comments.map((comment) => {
           return (
             <div className={styles.comments} key={comment.comment_id}>
               <h3>{comment.body}</h3>
-              <h3 className={styles.commentCredentials}>
-                Comment by: {comment.author}
-              </h3>
-              <h3 className={styles.commentCredentials}>
-                Posted on: {new Date(comment.created_at).toDateString()}
-              </h3>
+              <div className={styles.commentCredentials}>
+                <h3>Comment by: {comment.author}</h3>
+                <h3>
+                  Posted on: {new Date(comment.created_at).toDateString()}
+                </h3>
+              </div>
               {user.username === comment.author ? (
-                <div>
-                  <button
+                <div className={styles.deleteButtonDiv}>
+                  <Button
+                    text="Delete comment"
                     type="button"
                     onClick={(e) => handleDelete(e, comment.comment_id)}
-                  >
-                    Delete comment
-                  </button>
+                  ></Button>
                 </div>
               ) : (
                 <div></div>
