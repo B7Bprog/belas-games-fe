@@ -35,13 +35,15 @@ const Profiles = () => {
   ) : isLoading ? (
     <TextField text="Loading data..." />
   ) : Object.keys(user).length !== 0 ? (
-    <div className={styles.profilesDiv}>
+    <div className={styles.profilesDiv2}>
       <div className={styles.singleProfileDiv}>
-        <img
-          src={user.avatar_url}
-          alt='user"s avatar'
-          className={styles.img}
-        ></img>
+        <div className={styles.imageDiv}>
+          <img
+            src={user.avatar_url}
+            alt='user"s avatar'
+            className={styles.img}
+          ></img>
+        </div>
         <h3>Name: {user.name}</h3>
         <h3>Username: {user.username}</h3>
       </div>
