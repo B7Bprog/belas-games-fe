@@ -21,8 +21,16 @@ textarea {
   margin-top: 5%;
 }
 .comment {
+  background-color: white;
+  margin: 5%;
+  padding: 2%;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
 }
 .commentCredentials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #leaveComment {
   margin-bottom: 1%;

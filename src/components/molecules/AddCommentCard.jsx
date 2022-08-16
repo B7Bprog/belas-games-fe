@@ -13,6 +13,7 @@ const AddCommentCard = ({ review_id }) => {
 
   const { user } = useContext(userContext);
   //----API Request-----////////////////////////////////////////////////////////////////////
+
   function postComment(comment) {
     axios
       .post(
@@ -22,10 +23,12 @@ const AddCommentCard = ({ review_id }) => {
           body: comment,
         }
       )
+      .then(() => {})
       .catch((err) => {
         if (err) setErrorState(err);
       });
   }
+
   ////////////////////////////////////////////////////////////////////////
   useEffect(() => {
     setIsSubmitted(false);
@@ -106,7 +109,7 @@ const AddCommentCard = ({ review_id }) => {
       </div>
     )
   ) : (
-    <h3 id={styles.loginToComment}>Please log in to write a comment.</h3>
+    <h3 id={styles.loginToComment}>Please log in to leave a comment.</h3>
   );
 };
 
