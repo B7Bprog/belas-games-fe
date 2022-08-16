@@ -4,16 +4,21 @@
   margin-top: 0.5vw;
   margin-bottom: 0.5vw;
   align-items: center;
+  padding-left: 5%;
 }
 #sortLabel {
   font-size: 1.8rem;
+  width: 350px;
 }
 #sortSelect {
   margin: 1vw;
   font-size: 2rem;
   padding: 1vw;
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
+  .sortForm {
+    padding-left: 2%;
+  }
   #sortLabel {
     display: flex;
     flex-direction: column;
@@ -30,12 +35,14 @@
 }
 
 @media only screen and (min-width: 600px) {
+  .sortForm {
+  }
   #sortLabel {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   #sortSelect {
     margin: 1vw;
-    font-size: 2rem;
+    font-size: 1.4rem;
     padding: 0.7vw;
   }
 }
@@ -53,6 +60,7 @@
 @media only screen and (min-width: 2000px) {
   #sortLabel {
     font-size: 1.8rem;
+    width: 500px;
   }
   #sortSelect {
     font-size: 1.8rem;
