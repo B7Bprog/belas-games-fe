@@ -4,26 +4,37 @@ import axios from "axios";
 import { useEffect } from "react";
 import { Button } from "../atoms/Button";
 import styles from "./styles/Profiles.module.css";
+import TextField from "../atoms/TextField";
 
 const Profiles = () => {
   const [users, setUsers] = useState(["none"]);
+  const [errorState, setErrorState] = useState(undefined);
   const { user, setUser } = useContext(userContext);
+  const [isLoading, setIsLoading] = useState(false);
   console.log(Object.keys(user), "<<<< user in profile");
   useEffect(() => {
+    setIsLoading(true);
     axios
       .get(`https://belas-games.herokuapp.com/api/users`)
       .then((fatchedUsers) => {
         setUsers(fatchedUsers.data.users);
+        setIsLoading(false);
       })
-      .then(() => {
-        console.log(users, "<<<users here");
+      .catch((err) => {
+        setErrorState({ err });
       });
   }, []);
+
   function handleLogin(user) {
     console.log(user, "user - logging in");
     setUser(user);
   }
-  return Object.keys(user).length !== 0 ? (
+
+  return errorState ? (
+    <TextField text="Something went wrong" />
+  ) : isLoading ? (
+    <TextField text="Loading data..." />
+  ) : Object.keys(user).length !== 0 ? (
     <div className={styles.profilesDiv}>
       <div className={styles.singleProfileDiv}>
         <img
