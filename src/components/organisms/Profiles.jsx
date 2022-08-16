@@ -39,7 +39,7 @@ const Profiles = () => {
       <div className={styles.singleProfileDiv}>
         <img
           src={user.avatar_url}
-          alt='user"s avatar image'
+          alt='user"s avatar'
           className={styles.img}
         ></img>
         <h3>Name: {user.name}</h3>
@@ -53,7 +53,7 @@ const Profiles = () => {
           <div className={styles.singleProfileDiv}>
             <img
               src={user.avatar_url}
-              alt='user"s avatar image'
+              alt='user"s avatar'
               className={styles.img}
             ></img>
             <h3>Name: {user.name}</h3>

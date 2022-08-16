@@ -45,7 +45,7 @@ const ReviewCard = ({
                 <img
                   className={styles.img}
                   src={review.review_img_url}
-                  alt={`Image for review with title of: ${review.title}`}
+                  alt={`review with title of: ${review.title}`}
                 ></img>
               </div>
               <li id={styles.title}>
