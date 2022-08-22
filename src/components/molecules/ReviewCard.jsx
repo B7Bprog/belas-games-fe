@@ -52,20 +52,22 @@ const ReviewCard = ({
                 <h2>{`${review.title}`}</h2>
               </li>
               <li>
-                <h3> {`Author: ${review.owner}`} </h3>
+                <h3 className={styles.h3}> {`Author: ${review.owner}`} </h3>
               </li>
               <li>
                 {" "}
-                <h3>{`Category: ${review.category}`} </h3>
+                <h3 className={styles.h3}>{`Category: ${review.category}`} </h3>
               </li>
               <li>
                 {" "}
-                <h3>
+                <h3 className={styles.h3}>
                   {`Written at: ${new Date(review.created_at).toDateString()}`}
                 </h3>
               </li>
               <li>
-                <h3>{`Number of comments: ${review.comment_count}`} </h3>{" "}
+                <h3 className={styles.h3}>
+                  {`Number of comments: ${review.comment_count}`}{" "}
+                </h3>{" "}
               </li>
             </ul>
           </Link>
