@@ -12,7 +12,8 @@ export const useSingleReview = (
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get(`https://belas-games.herokuapp.com/api/reviews/${id}`)
+      // .get(`https://belas-games.herokuapp.com/api/reviews/${id}`)
+      .get(`https://belas-games.vercel.app/api/reviews/${id}`)
       .then((response) => {
         setReview(response.data.review);
         setIsLoading(false);

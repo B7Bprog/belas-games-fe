@@ -13,7 +13,7 @@ const Comments = ({ review_id }) => {
   useEffect(() => {
     axios
       .get(
-        `https://belas-games.herokuapp.com/api/reviews/${review_id}/comments`
+        `https://belas-games.vercel.app/api/reviews/${review_id}/comments`
       )
       .then((response) => {
         setComments(response.data.comments);
@@ -23,7 +23,7 @@ const Comments = ({ review_id }) => {
   function handleDelete(e, comment_id) {
     setIsDeleting(true);
     axios
-      .delete(`https://belas-games.herokuapp.com/api/comments/${comment_id}`)
+      .delete(`https://belas-games.vercel.app/api/comments/${comment_id}`)
       .then((response) => {
         console.log(response, "response");
         setIsDeleting(false);

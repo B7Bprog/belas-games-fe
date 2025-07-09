@@ -15,7 +15,7 @@ const Profiles = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get(`https://belas-games.herokuapp.com/api/users`)
+      .get(`https://belas-games.vercel.app/api/users`)
       .then((fatchedUsers) => {
         setUsers(fatchedUsers.data.users);
         setIsLoading(false);
