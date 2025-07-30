@@ -19,7 +19,7 @@
 .buttonSmall {
   text-decoration: none;
   transition: all 235ms ease-in-out;
-  padding: 10px 30px;
+  padding: 7px 30px;
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;

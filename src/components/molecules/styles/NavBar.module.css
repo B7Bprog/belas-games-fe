@@ -5,31 +5,41 @@
   padding: 0.5rem;
   font-size: 3.3rem;
   color: rgb(244, 84, 84);
-  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
-             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
-
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,
+    -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 
 .navBackground {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 14rem;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 14rem;
 }
 
-
-
 .login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: start;
   margin-right: 5%;
   margin-top: 2%;
   padding-left: 2%;
 }
 
-
 #loginButton {
-padding-left: 82rem;
-padding-top: 1rem;
+  padding-left: 82rem;
+  padding-top: 1rem;
 }
+
+.loggedInText {
+  font-size: 1rem;
+  color: white;
+  top: 8%;
+  position: absolute;
+  z-index: 10;
+}
+
 .menuButtons {
   display: flex;
   justify-content: space-around;
@@ -43,7 +53,7 @@ padding-top: 1rem;
 
 #navbar {
   height: 14rem;
- 
+  border-bottom: 2px solid rgb(75, 75, 88);
 }
 
 @media only screen and (max-width: 300px) {
