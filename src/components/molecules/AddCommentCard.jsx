@@ -17,7 +17,7 @@ const AddCommentCard = ({ review_id }) => {
   function postComment(comment) {
     axios
       .post(
-        `https://belas-games.herokuapp.com/api/reviews/${review_id}/comments`,
+        `https://belas-games.vercel.app/api/reviews/${review_id}/comments`,
         {
           username: user.username,
           body: comment,
