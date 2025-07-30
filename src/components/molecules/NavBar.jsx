@@ -23,7 +23,7 @@ const NavBar = () => {
       ) : (
         <div className={style.login}>
           <h3>{`Logged in as: ${user.username}`}</h3>
-          <Button text={"Logout"} onClick={handleLogout}></Button>
+          <Button text={"Logout"} style={{style: "buttonSmall"}} onClick={handleLogout}></Button>
         </div>
       )}
       </div>

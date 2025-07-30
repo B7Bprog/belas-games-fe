@@ -11,7 +11,7 @@ const Profiles = () => {
   const [errorState, setErrorState] = useState(undefined);
   const { user, setUser } = useContext(userContext);
   const [isLoading, setIsLoading] = useState(false);
-  console.log(Object.keys(user), "<<<< user in profile");
+
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -26,7 +26,6 @@ const Profiles = () => {
   }, []);
 
   function handleLogin(user) {
-    console.log(user, "user - logging in");
     setUser(user);
   }
 
@@ -60,7 +59,7 @@ const Profiles = () => {
             ></img>
             <h3>Name: {user.name}</h3>
             <h3>Username: {user.username}</h3>
-            <Button text={"Login"} onClick={() => handleLogin(user)} />
+            <Button text={"Login"} style={{style: "buttonSmall"}} onClick={() => handleLogin(user)} />
           </div>
         );
       })}
