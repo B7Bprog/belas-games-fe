@@ -7,16 +7,50 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   border: solid white;
-  font-size: xx-large;
+  border-radius: 20px;
+  font-size: 1rem;
   font-weight: bold;
+  color: white;
+  background-color: rgb(130, 0, 0);
+  width: 40rem;
+  height: 2.5rem;
+}
+
+.buttonSmall {
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  padding: 10px 30px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border: solid white;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(130, 0, 0);
+  width: 10rem;
+  height: 2.5rem;
 }
 
 .button:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
-  transform: translate3d(0, 2px, 0);
+  transform: scale(1.02);
+  transition-duration: 0s;
 }
 
 .button:focus {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
+
+.buttonSmall:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+ transform: scale(1.02);
+  transition-duration: 0s;
+}
+
+.buttonSmall:focus {
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
 
