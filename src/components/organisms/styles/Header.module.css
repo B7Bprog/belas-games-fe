@@ -1,9 +1,8 @@
-.login {
+
+
+
+/* #header {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  column-gap: 1rem;
-  margin-right: 5%;
-  margin-top: 2%;
-  padding-left: 2%;
-}
+  flex-direction: row-reverse;
+  border: solid red;
+} */
