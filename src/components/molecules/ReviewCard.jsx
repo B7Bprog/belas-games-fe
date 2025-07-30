@@ -49,7 +49,7 @@ const ReviewCard = ({
                 ></img>
               </div>
               <li id={styles.title}>
-                <h2>{`${review.title}`}</h2>
+                <h4>{`${review.title}`}</h4>
               </li>
               <li>
                 <h3 className={styles.h3}> {`Author: ${review.owner}`} </h3>
