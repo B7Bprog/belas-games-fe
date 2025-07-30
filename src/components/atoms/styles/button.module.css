@@ -1,7 +1,7 @@
 .button {
   text-decoration: none;
   transition: all 235ms ease-in-out;
-  padding: 13px 30px;
+  padding: 10px 30px;
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -12,8 +12,8 @@
   font-weight: bold;
   color: white;
   background-color: rgb(130, 0, 0);
-  width: 40rem;
-  height: 2.5rem;
+  width: 20rem;
+  height: 2.2rem;
 }
 
 .buttonSmall {
@@ -31,7 +31,7 @@
   color: white;
   background-color: rgb(130, 0, 0);
   width: 10rem;
-  height: 2.5rem;
+  height: 2.2rem;
 }
 
 .button:hover {
@@ -62,7 +62,7 @@
 
 @media only screen and (min-width: 1400px) {
   .button {
-    padding: 9px 20px;
+    padding: 6px 20px;
     font-size: large;
   }
 }
