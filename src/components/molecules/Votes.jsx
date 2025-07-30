@@ -16,7 +16,7 @@ const Votes = ({ review, setHasUpVoted, hasUpVoted, originalNumOfVotes }) => {
   function patchReview() {
     axios
       .patch(
-        `https://belas-games.herokuapp.com/api/reviews/${review.review_id}`,
+        `https://belas-games.vercel.app/api/reviews/${review.review_id}`,
         { inc_votes: `${incrementVotes}` }
       )
       .then(() => {})
