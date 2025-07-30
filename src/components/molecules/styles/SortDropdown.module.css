@@ -14,7 +14,12 @@
 #sortSelect {
   margin: 1vw;
   font-size: 2rem;
-  padding: 2vw;
+  color: white;
+  border-radius: 20px;
+  height: 2rem;
+  width: 12rem;
+  padding-left: 2rem;
+  background-color: rgb(33, 33, 147);
 }
 @media only screen and (max-width: 500px) {
   .sortForm {
@@ -56,6 +61,7 @@
     margin: 1vw;
     font-size: 1.4rem;
     padding: 0rem;
+    padding-left: 0.3rem;
   }
 }
 @media only screen and (min-width: 2000px) {

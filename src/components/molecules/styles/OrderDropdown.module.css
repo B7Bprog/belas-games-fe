@@ -12,7 +12,12 @@
 #orderSelect {
   margin: 1vw;
   font-size: 2rem;
+  color: white;
+  border-radius: 20px;
+  height: 2rem;
+  width: 12rem;
   padding: 1vw;
+  background-color: rgb(33, 33, 147);
 }
 
 @media only screen and (max-width: 500px) {
@@ -50,6 +55,7 @@
     margin: 1vw;
     font-size: 1.4rem;
     padding: 0rem;
+    padding-left: 0.3rem;
   }
 }
 @media only screen and (min-width: 2000px) {
