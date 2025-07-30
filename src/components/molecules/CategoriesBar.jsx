@@ -24,7 +24,7 @@ const CategoriesBar = () => {
               className={styles.Link}
             >
               <div key={category.slug} className={styles.linkContainer}>
-                <div className={styles.linkWrapper}>{category.slug}</div>
+                <div className={styles.linkWrapper}>{category.slug[0].toUpperCase() + category.slug.slice(1)}</div>
               </div>
             </Link>
           );
