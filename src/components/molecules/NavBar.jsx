@@ -17,7 +17,7 @@ const NavBar = () => {
       {Object.keys(user).length === 0 ? (
         <div className={style.login}>
           <Link to="/profile">
-            <Button text={"Login"}></Button>
+            <Button text={"Login"} style={{style: "buttonSmall"}}></Button>
           </Link>
         </div>
       ) : (
