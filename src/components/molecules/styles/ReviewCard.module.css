@@ -24,13 +24,13 @@
 
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
-   transform: scale(1.02);
+  transform: scale(1.02);
   transition-duration: 0s;
   border-color: white;
 }
 
 .card:focus {
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 8px 4px -6px;
 }
 .allCards {
   display: grid;
