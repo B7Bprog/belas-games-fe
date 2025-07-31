@@ -36,6 +36,7 @@
 
 #loginButton {
   padding-left: 71%;
+  padding-top: 0.5rem;
 }
 
 .loggedInText {
