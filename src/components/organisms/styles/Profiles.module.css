@@ -3,11 +3,12 @@
   padding-left: 3%;
   padding-right: 3%;
   padding-bottom: 2%;
+  padding-top: 2%;
 
   grid-template-columns: 1fr;
   justify-items: center;
   justify-content: space-around;
-  row-gap: 5ch;
+  row-gap: 2ch;
   column-gap: 5ch;
   width: 100%;
 }

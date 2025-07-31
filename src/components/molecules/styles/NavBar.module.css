@@ -18,26 +18,35 @@
 
 .login {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: start;
-  margin-right: 5%;
-  margin-top: 2%;
-  padding-left: 2%;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25rem;
+  height: 4rem;
 }
 
+/* .logOut {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  border: 5px solid rgb(34, 206, 15);
+} */
+
 #loginButton {
-  padding-left: 82rem;
-  padding-top: 1rem;
+  padding-left: 71%;
 }
 
 .loggedInText {
-  font-size: 1rem;
-  color: white;
+  font-size: 0.8rem;
+  color: rgb(255, 255, 255);
   top: 8%;
-  position: absolute;
-  z-index: 10;
+  width: 10rem;
+  padding-left: 1.5rem;
+  /* padding-right: 1rem; */
+  /* position: absolute;
+  z-index: 10; */
 }
 
 .menuButtons {
