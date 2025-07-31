@@ -16,6 +16,9 @@
   height: 2.2rem;
 }
 
+.button.active {
+  background-color: rgb(146, 50, 50);
+}
 .buttonSmall {
   text-decoration: none;
   transition: all 235ms ease-in-out;
@@ -33,25 +36,32 @@
   width: 10rem;
   height: 2.2rem;
 }
+.buttonSmall.active {
+  background-color: rgb(146, 50, 50);
+}
 
 .button:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
   transform: scale(1.02);
   transition-duration: 0s;
+  background-color: rgb(146, 50, 50);
 }
 
 .button:focus {
   box-shadow: rgba(0, 0, 0, 0.2) 2px 8px 4px -6px;
+  background-color: rgb(146, 50, 50);
 }
 
 .buttonSmall:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
   transform: scale(1.02);
   transition-duration: 0s;
+  background-color: rgb(146, 50, 50);
 }
 
 .buttonSmall:focus {
   box-shadow: rgba(0, 0, 0, 0.2) 2px 8px 4px -6px;
+  background-color: rgb(146, 50, 50);
 }
 
 @media only screen and (max-width: 300px) {

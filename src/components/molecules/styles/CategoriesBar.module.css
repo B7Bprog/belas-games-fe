@@ -11,7 +11,6 @@
   padding: 0.4rem;
   background-color: rgb(36, 0, 165, 0.5);
   border: 2px solid rgb(5, 0, 54);
- 
 }
 #categoriesTitle {
   display: flex;
@@ -55,10 +54,12 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
   transform: scale(1.02);
   transition-duration: 0s;
+  background-color: rgb(146, 50, 50);
 }
 
 .Link:focus {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
+  background-color: rgb(146, 50, 50);
 }
 @media only screen and (max-width: 300px) {
   #categoriesTitle {
