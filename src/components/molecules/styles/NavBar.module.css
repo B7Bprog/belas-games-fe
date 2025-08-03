@@ -58,7 +58,12 @@
 }
 
 .menuButton {
-  background-color: red;
+  /* background-color: red; */
+  font-size: 8rem;
+}
+
+.activeMenuButton {
+  background-color: rgb(0, 242, 40);
 }
 
 #navbar {
