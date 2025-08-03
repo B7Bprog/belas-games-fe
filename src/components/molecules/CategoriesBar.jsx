@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useCategories } from "../../my-custom-hooks/useCategories";
 import TextField from "../atoms/TextField";
@@ -12,11 +12,16 @@ const CategoriesBar = () => {
 
   const location = useLocation();
 
-  console.log("Location here:", location.pathname);
+  useEffect(() => {
+    const pathParts = location.pathname.split("/");
+    const categorySlug = pathParts[pathParts.length - 1];
 
-  const isActiveCategory = (categorySlug) => {
-    return location.pathname === `/reviews/categories/${categorySlug}`;
-  };
+    if (categories.some((cat) => cat.slug === categorySlug)) {
+      setActiveCategorySlug(categorySlug);
+    } else {
+      setActiveCategorySlug(null);
+    }
+  }, [location.pathname, categories]);
 
   return errorState ? (
     <TextField text="Something went wrong" />
@@ -33,7 +38,6 @@ const CategoriesBar = () => {
               className={`${styles.Link} ${
                 activeCategorySlug === category.slug ? styles.activeLink : ""
               }`}
-              onClick={() => setActiveCategorySlug(category.slug)}
             >
               <div key={category.slug} className={styles.linkContainer}>
                 <div className={styles.linkWrapper}>
