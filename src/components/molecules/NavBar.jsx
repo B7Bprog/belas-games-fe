@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "../atoms/Button";
 import style from "./styles/NavBar.module.css";
 import { useContext } from "react";
@@ -10,6 +10,10 @@ const NavBar = () => {
   function handleLogout() {
     setUser({});
   }
+
+  const location = useLocation();
+  console.log("rendering location:", location);
+
   return (
     <div id={style.navbar}>
       <img
@@ -42,11 +46,25 @@ const NavBar = () => {
       </div>
       <div className={style.menuButtons}>
         <Link to="/">
-          <Button className={style.menuButton} text={"Home"}></Button>
+          <Button
+            style={
+              location.pathname === "/" || location.pathname !== "/profile"
+                ? { style: "buttonActive" }
+                : undefined
+            }
+            text={"Home"}
+          ></Button>
         </Link>
 
         <Link to="/profile">
-          <Button className={style.menuButton} text={"Profile"}></Button>
+          <Button
+            style={
+              location.pathname === "/profile"
+                ? { style: "buttonActive" }
+                : undefined
+            }
+            text={"Profile"}
+          ></Button>
         </Link>
       </div>
     </div>
