@@ -34,7 +34,7 @@ const Profiles = () => {
   ) : isLoading ? (
     <TextField text="Loading data..." />
   ) : Object.keys(user).length !== 0 ? (
-    <div className={styles.profilesDiv2}>
+    <div className={styles.profilesDiv2} key={user.username}>
       <div className={styles.singleProfileDiv}>
         <div className={styles.imageDiv}>
           <img
@@ -51,7 +51,7 @@ const Profiles = () => {
     <div className={styles.profilesDiv}>
       {users.map((user) => {
         return (
-          <div className={styles.singleProfileDiv}>
+          <div className={styles.singleProfileDiv} key={user.namename}>
             <img
               src={user.avatar_url}
               alt='user"s avatar'
@@ -59,7 +59,11 @@ const Profiles = () => {
             ></img>
             <h3>Name: {user.name}</h3>
             <h3>Username: {user.username}</h3>
-            <Button text={"Login"} style={{style: "buttonSmall"}} onClick={() => handleLogin(user)} />
+            <Button
+              text={"Login"}
+              style={{ style: "buttonSmall" }}
+              onClick={() => handleLogin(user)}
+            />
           </div>
         );
       })}

@@ -34,6 +34,7 @@ const CategoriesBar = () => {
         {categories.map((category) => {
           return (
             <Link
+              key={category.slug}
               to={`/reviews/categories/${category.slug}`}
               className={`${styles.Link} ${
                 activeCategorySlug === category.slug ? styles.activeLink : ""

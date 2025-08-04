@@ -12,9 +12,7 @@ const Comments = ({ review_id }) => {
   console.log(user, "<<<user");
   useEffect(() => {
     axios
-      .get(
-        `https://belas-games.vercel.app/api/reviews/${review_id}/comments`
-      )
+      .get(`https://belas-games.vercel.app/api/reviews/${review_id}/comments`)
       .then((response) => {
         setComments(response.data.comments);
       });
@@ -25,14 +23,9 @@ const Comments = ({ review_id }) => {
     axios
       .delete(`https://belas-games.vercel.app/api/comments/${comment_id}`)
       .then((response) => {
-        console.log(response, "response");
         setIsDeleting(false);
       });
-    //delete here
-    console.log("deleted comment");
   }
-
-  console.log(comments[4], "comment no. 4");
 
   return isDeleting ? (
     <h2 className={styles.commentsTitle}>Deleting comment</h2>
