@@ -63,12 +63,12 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
   transform: scale(1.02);
   transition-duration: 0s;
-  background-color: rgb(146, 50, 50);
+  background-color: rgb(196, 67, 67);
 }
 
 .Link:focus {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
-  background-color: rgb(146, 50, 50);
+  background-color: rgb(196, 67, 67);
 }
 
 @media only screen and (max-width: 300px) {

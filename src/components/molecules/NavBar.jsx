@@ -1,18 +1,27 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "../atoms/Button";
 import style from "./styles/NavBar.module.css";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { userContext } from "../../contexts/userContext";
 import navBackground from "../../assets/images/main-background.png";
 
 const NavBar = () => {
   const { user, setUser } = useContext(userContext);
+  const [position, setPosition] = useState(undefined);
+  const [opened, setOpened] = useState(false);
+
   function handleLogout() {
     setUser({});
   }
 
   const location = useLocation();
-  console.log("rendering location:", location);
+
+  useEffect(() => {
+    if (opened) {
+      setPosition(location.pathname);
+    }
+    setOpened(true);
+  }, [location.pathname]);
 
   return (
     <div id={style.navbar}>
@@ -47,11 +56,7 @@ const NavBar = () => {
       <div className={style.menuButtons}>
         <Link to="/">
           <Button
-            style={
-              location.pathname === "/" || location.pathname !== "/profile"
-                ? { style: "buttonActive" }
-                : undefined
-            }
+            style={position === "/" ? { style: "buttonActive" } : undefined}
             text={"Home"}
           ></Button>
         </Link>

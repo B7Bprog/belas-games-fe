@@ -15,10 +15,9 @@ const Votes = ({ review, setHasUpVoted, hasUpVoted, originalNumOfVotes }) => {
 
   function patchReview() {
     axios
-      .patch(
-        `https://belas-games.vercel.app/api/reviews/${review.review_id}`,
-        { inc_votes: `${incrementVotes}` }
-      )
+      .patch(`https://belas-games.vercel.app/api/reviews/${review.review_id}`, {
+        inc_votes: `${incrementVotes}`,
+      })
       .then(() => {})
       .catch((err) => {
         setErrorState({ err });
@@ -61,7 +60,7 @@ const Votes = ({ review, setHasUpVoted, hasUpVoted, originalNumOfVotes }) => {
 
   let buttonTextColor = "red";
   if (tempVotes === originalVotes) {
-    buttonTextColor = "black";
+    buttonTextColor = "white";
   }
 
   return errorState ? (

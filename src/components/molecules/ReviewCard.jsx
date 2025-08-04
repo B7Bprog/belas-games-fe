@@ -21,8 +21,6 @@ const ReviewCard = ({
     selectedOrder
   );
 
-  console.log(reviews, "<<<< reviews in ReviewCard");
-
   if (categoryParam) {
     reviews = reviews.filter((review) => review.category === categoryParam);
   }

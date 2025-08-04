@@ -16,9 +16,9 @@
   height: 2.2rem;
 }
 
-.button.active {
+/* .button.active {
   background-color: rgb(146, 50, 50);
-}
+} */
 .buttonSmall {
   text-decoration: none;
   transition: all 235ms ease-in-out;
@@ -54,6 +54,18 @@
   background-color: rgb(196, 67, 67);
 }
 
+.buttonActive:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+  transform: scale(1.02);
+  transition-duration: 0s;
+  background-color: rgb(196, 67, 67);
+}
+
+.buttonActive:focus {
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 8px 4px -6px;
+  background-color: rgb(196, 67, 67);
+}
+
 .button:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
   transform: scale(1.02);
@@ -74,18 +86,6 @@
 }
 
 .buttonSmall:focus {
-  box-shadow: rgba(0, 0, 0, 0.2) 2px 8px 4px -6px;
-  background-color: rgb(196, 67, 67);
-}
-
-.buttonActive:hover {
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
-  transform: scale(1.02);
-  transition-duration: 0s;
-  background-color: rgb(196, 67, 67);
-}
-
-.buttonActive:focus {
   box-shadow: rgba(0, 0, 0, 0.2) 2px 8px 4px -6px;
   background-color: rgb(196, 67, 67);
 }
