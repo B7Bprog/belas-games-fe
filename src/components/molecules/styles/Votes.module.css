@@ -1,18 +1,19 @@
 #hasVoted {
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 1.8rem;
   padding-bottom: 5%;
 }
 #loginToVote {
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 1.5rem;
 }
 .thumbs {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 2rem;
 }
 #votes {
   display: flex;

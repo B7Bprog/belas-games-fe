@@ -1,17 +1,16 @@
 .CategoriesBar {
   display: grid;
-
   grid-template-columns: 1fr;
   justify-content: space-evenly;
   justify-items: center;
   align-content: space-evenly;
   align-items: center;
-
   row-gap: 0.4rem;
   padding: 0.4rem;
   background-color: rgb(36, 0, 165, 0.5);
   border: 2px solid rgb(5, 0, 54);
 }
+
 #categoriesTitle {
   display: flex;
   justify-content: center;
@@ -20,17 +19,13 @@
   color: white;
 }
 
-.linkWrapper {
-}
 .Link {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70px;
   width: 90%;
-
   text-decoration: none;
-
   transition: all 235ms ease-in-out;
   cursor: pointer;
   user-select: none;
@@ -54,9 +49,6 @@
 .activeLink:hover,
 .activeLink:focus {
   background-color: rgb(196, 67, 67);
-}
-
-.linkContainer {
 }
 
 .Link:hover {
@@ -88,9 +80,6 @@
     font-size: x-large;
   }
   #categoriesTitle {
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
     font-size: 4rem;
   }
 }
@@ -99,11 +88,7 @@
   .CategoriesBar {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-
   #categoriesTitle {
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
     font-size: 2rem;
   }
   .Link {
@@ -112,15 +97,9 @@
     width: 90%;
   }
 }
-@media only screen and (min-width: 2000px) {
-  .CategoriesBar {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
 
+@media only screen and (min-width: 2000px) {
   #categoriesTitle {
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
     font-size: 5rem;
   }
   .Link {
