@@ -2,7 +2,10 @@
   background-color: white;
   margin: 5%;
   padding: 2%;
+  color: white;
   box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+  background-color: rgb(255, 255, 255, 0.3);
+  border: 5px solid rgba(255, 255, 255, 0.2);
 }
 .commentCredentials {
   display: flex;
