@@ -71,14 +71,30 @@ const Votes = ({ review, setHasUpVoted, hasUpVoted, originalNumOfVotes }) => {
         <div>
           <p id={styles.hasVoted}>You have voted already.</p>
           <div className={styles.thumbs}>
-            <Button text="👍" onClick={handleThumbsUp} />
-            <Button text="👎" onClick={handleThumbsDown} />{" "}
+            <Button
+              style={{ style: "buttonSmall" }}
+              text="👍"
+              onClick={handleThumbsUp}
+            />
+            <Button
+              style={{ style: "buttonSmall" }}
+              text="👎"
+              onClick={handleThumbsDown}
+            />{" "}
           </div>
         </div>
       ) : (
         <div className={styles.thumbs}>
-          <Button text="👍" onClick={handleThumbsUp} />
-          <Button text="👎" onClick={handleThumbsDown} />
+          <Button
+            style={{ style: "buttonSmall" }}
+            text="👍"
+            onClick={handleThumbsUp}
+          />
+          <Button
+            style={{ style: "buttonSmall" }}
+            text="👎"
+            onClick={handleThumbsDown}
+          />
         </div>
       )}
       <div id={styles.votes}>
