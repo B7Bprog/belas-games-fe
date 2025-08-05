@@ -1,5 +1,5 @@
 #navbar {
-  height: 14rem;
+  height: 16rem;
   border-bottom: 2px solid rgb(75, 75, 88);
   position: relative;
 }
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   padding: 0.5rem;
-  font-size: clamp(1.2rem, 4vw, 5rem);
+  font-size: clamp(2.5rem, 4vw, 5rem);
   color: rgb(244, 84, 84);
   text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff,
     -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
@@ -25,6 +25,7 @@
 #loginButton {
   padding-left: 71%;
   padding-top: 0.5rem;
+  padding-right: 3%;
 }
 
 .login {
@@ -45,7 +46,9 @@
 
 .menuButtons {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   gap: 1rem;
   padding: 1rem;
 }
@@ -61,6 +64,16 @@
 @media only screen and (min-width: 600px) {
   #mainTitle {
     font-size: 2.8rem;
+  }
+  .menuButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  #navbar {
+    height: 14rem;
   }
 }
 
