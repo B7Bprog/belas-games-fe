@@ -8,11 +8,12 @@
   margin: 5%;
   padding-bottom: 2%;
   text-align: center;
-
+  color: white;
   box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
 
   transition: all 235ms ease-in-out;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255, 0.3);
+  border: 5px solid rgba(255, 255, 255, 0.2);
 }
 
 .allCards {
