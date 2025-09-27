@@ -50,7 +50,6 @@
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
 }
 
 .menuButton {
@@ -86,7 +85,24 @@
 @media only screen and (min-width: 2000px) {
   #mainTitle {
     font-size: 5rem;
+    padding: 0px;
+    margin: 0px;
+    height: 5rem;
   }
+  .menuButtons {
+    padding-top: 1rem;
+  }
+  .login {
+    height: 3rem;
+    padding-top: 2rem;
+    width: 40rem;
+  }
+  #loginButton {
+    padding-right: 0%;
+  }
+  /* .menuButton {
+    font-size: 4rem;
+  } */
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
